@@ -1,0 +1,8 @@
+pandas
+numpy
+ipykernel
+nltk
+requests
+scikit-learn
+streamlit
+openpyxl
