@@ -6,7 +6,7 @@ def recommend(movie):
     distances = sorted(list(enumerate(similarity[index])), reverse=True, key=lambda x: x[1])
     recommended_movie_names = []
     for i in distances[1:6]:
-        recommended_movie_names.append(movies.iloc[i[0]].'Movie Name')
+        recommended_movie_names.append(movies.iloc[i[0]]['Movie Name'])
 
     return recommended_movie_names
 
@@ -25,6 +25,7 @@ if st.button('Show Recommendation'):
     for i in recommended_movie_names:
         st.subheader(i)
         
+
 
 
 
