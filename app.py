@@ -2,7 +2,7 @@ import pickle
 import streamlit as st
 
 def recommend(movie):
-    index = movies[movies['Title'] == movie].index[0]
+    index = movies[movies['Movie Name'] == movie].index[0]
     distances = sorted(list(enumerate(similarity[index])), reverse=True, key=lambda x: x[1])
     recommended_movie_names = []
     for i in distances[1:6]:
@@ -25,4 +25,5 @@ if st.button('Show Recommendation'):
     for i in recommended_movie_names:
         st.subheader(i)
         
+
 
